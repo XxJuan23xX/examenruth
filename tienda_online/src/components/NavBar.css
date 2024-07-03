@@ -1,0 +1,104 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    margin: 0; /* Asegúrate de que no haya margen */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño del elemento */
+}
+
+.navbar-left, .navbar-center, .navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left a {
+    margin-right: 15px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.navbar-subscribe {
+    background-color: #5acec5;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.navbar-center {
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.navbar-brand a {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 20px;
+    color: #000;
+    text-decoration: none;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-menu li {
+    margin-right: 15px;
+    font-weight: bold;
+    
+}
+
+.navbar-menu a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right a {
+    margin-left: 15px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.navbar-icon {
+    font-size: 24px; /* Ajusta el tamaño del ícono */
+    color: #333;
+    margin-left: 15px;
+    
+}
+
+.logout-button {
+    background: none;
+    background-color: red;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 15px;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 10px 15px;
+}
+
+.history-icon {
+    width: 50px; /* Ajusta el tamaño del ícono según sea necesario */
+    height: 30px;
+}
+
+.car-icon {
+    width: 40px; /* Ajusta el tamaño del ícono según sea necesario */
+    height: 40px;
+}

@@ -1,0 +1,178 @@
+body {
+    background-color: white; /* Asegura que el fondo de la página completa sea blanco */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.cart-title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.cart-container {
+    width: 80%;
+    margin: 40px auto 20px auto; /* Ajusta el margen superior para la separación */
+    padding: 20px;
+    background-color: #fff; /* Fondo blanco del contenedor del carrito */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #888; /* Bordes grises más oscuros */
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.cart-table th, .cart-table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    color: #000; /* Cambiar color a negro */
+}
+
+.cart-table th {
+    background-color: #D3D3D3;
+}
+
+.even {
+    background-color: #ffffff; /* Fondo blanco para filas pares */
+}
+
+.odd {
+    background-color: #D3D3D3; /* Fondo gris claro para filas impares */
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+    color: #000; /* Cambiar color a negro */
+}
+
+.product-image1 {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity-control button {
+    padding: 5px;
+    border: 1px solid #ddd;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    font-size: 1em;
+    color: #000; /* Cambiar color a negro */
+}
+
+.quantity-control span {
+    padding: 0 10px;
+    color: #000; /* Cambiar color a negro */
+}
+
+.cart-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    color: #000; /* Cambiar color a negro */
+}
+
+.promo-code {
+    display: flex;
+    align-items: center;
+}
+
+.promo-code input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+    color: #000; /* Cambiar color a negro */
+}
+
+.apply-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+.totals {
+    text-align: right;
+    color: #000; /* Cambiar color a negro */
+}
+
+.subtotal, .discount, .total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #000; /* Cambiar color a negro */
+}
+
+.cart-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.cart-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.red-button {
+    background-color: red;
+    color: white;
+}
+
+.green-button {
+    background-color: green;
+    color: white;
+}
+
+.remove-icon {
+    color: red;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.confirmation-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-size: 1.2em;
+    z-index: 1000;
+}
+.Text-p{
+    color: red;
+    font-size: 20px;
+}

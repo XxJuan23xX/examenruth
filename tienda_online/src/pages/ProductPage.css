@@ -1,0 +1,201 @@
+.product-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: white; /* Fondo de la página en blanco */
+}
+
+.banner {
+    background-color: #E5BC93;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.banner-text h1, p {
+    color: white;
+}
+
+.banner-text h1, .banner-text p {
+    margin: 0; /* Elimina el margen predeterminado */
+    font-size: 40px; /* Tamaño del texto */
+    line-height: 1.2; /* Altura de la línea */
+}
+
+.banner-text .subtext {
+    font-size: 30px;
+}
+
+.banner-button {
+    background-color: #1e8449;
+    color: white;
+    border: 2px solid #1e8449; /* Añadir borde */
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 20px;
+}
+
+.banner-button:hover {
+    background-color: #145a32;
+}
+
+.banner-image {
+    flex: 1;
+    text-align: left; /* Alinear la imagen a la izquierda */
+    margin-left: 150px; /* Añadir margen a la izquierda */
+}
+
+.banner-image img {
+    max-width: 100%;
+    height: auto;
+    max-height: 250px; /* Ajusta el tamaño máximo de la imagen */
+    border-radius: 10px;
+    object-fit: contain; /* Asegura que la imagen mantenga sus proporciones */
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filters button {
+    background-color: white; /* Fondo blanco */
+    border: 2px solid orange; /* Borde naranja */
+    color: black; /* Color del texto */
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 20px;
+}
+
+.filters button:hover {
+    background-color: orange; /* Fondo naranja al pasar el mouse */
+    color: white; /* Color del texto al pasar el mouse */
+}
+
+.productos-container {
+    padding: 20px;
+    color: black; /* Color del texto en negro para contraste */
+    background-color: white; /* Fondo blanco */
+}
+
+.productos-container h2 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-card1 {
+    background-color: #DCDCDC; /* Fondo transparente */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: left; /* Texto alineado a la izquierda */
+    transition: box-shadow 0.3s;
+    position: relative; /* Para el posicionamiento de elementos */
+}
+
+.product-card1:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card1 img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.product-header h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.product-price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: red; /* Color rojo para el precio */
+    margin-bottom: 10px;
+}
+
+.product-description {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.product-stock {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.add-to-cart {
+    background-color: #1e8449;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 20px; /* Bordes redondeados */
+    cursor: pointer;
+    align-self: stretch; /* Botón estirado a lo ancho del contenedor */
+    text-align: center; /* Centrar el texto del botón */
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.add-to-cart:hover {
+    background-color: #145a32;
+    transform: scale(1.05);
+}
+
+.confirmation-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-size: 1.2em;
+    z-index: 1000;
+}

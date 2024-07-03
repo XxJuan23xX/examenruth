@@ -1,0 +1,178 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.admin-orders-page {
+    display: flex;
+    background-color: #000; /* Fondo negro */
+    min-height: 100vh;
+}
+
+.orders-sidebar {
+    width: 250px;
+    background-color: #1a1a1a; /* Color oscuro para la barra lateral */
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.orders-sidebar-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.orders-sidebar-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.orders-sidebar-menu li {
+    margin: 20px 0;
+}
+
+.orders-sidebar-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+}
+
+.orders-sidebar-menu a:hover {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.orders-logout-button {
+    background-color: red;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.orders-logout-button:hover {
+    background-color: darkred;
+}
+
+.orders-admin-content {
+    flex: 1;
+    padding: 20px;
+    color: #6300d8;
+}
+
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.orders-table th {
+    border: none; /* Eliminamos las líneas verticales */
+    padding: 10px;
+    text-align: left;
+}
+
+.orders-table td {
+    border: none;
+    padding: 20px 10px; /* Añadimos más separación vertical */
+    text-align: left;
+    animation: glowing-text 2s infinite;
+    font-weight: bold; /* Texto en negritas */
+    color: #fff; /* Texto blanco */
+}
+
+.orders-table th {
+    background-color: #333;
+    color: #ad00ff; /* Amarillo dorado */
+}
+
+.orders-table tr {
+    margin-bottom: 20px; /* Añadimos margen inferior a cada fila */
+}
+
+.orders-table td button {
+    background-color: #00e1ff;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold; /* Texto en negritas */
+}
+
+.orders-table td button:hover {
+    background-color: #0c5bb5;
+}
+
+@keyframes glowing-text {
+    0% {
+        text-shadow: 0 0 5px #00e1ff, 0 0 10px #00e1ff, 0 0 15px #00e1ff;
+    }
+    50% {
+        text-shadow: 0 0 2px #00e1ff, 0 0 5px #00e1ff, 0 0 10px #00e1ff;
+    }
+    100% {
+        text-shadow: 0 0 5px #00e1ff, 0 0 10px #00e1ff, 0 0 15px #00e1ff;
+    }
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.modal-content h3 {
+    color: #ffd700; /* Amarillo dorado */
+    margin-bottom: 20px;
+}
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-card {
+    background-color: #444;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 120px;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.modal-content button {
+    background-color: #00e1ff;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.modal-content button:hover {
+    background-color: #0c5bb5;
+}
