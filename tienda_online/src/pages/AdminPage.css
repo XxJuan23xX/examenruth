@@ -18,6 +18,12 @@ body {
     min-height: 100vh;
 }
 
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .sidebar {
     width: 250px;
     background-color: #1a1a1a; /* Color oscuro para la barra lateral */
@@ -155,6 +161,204 @@ body {
     align-items: flex-start;
 }
 
+.product-actions button.delete-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Tamaño del botón más grande */
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Margen para separar de los demás botones */
+}
+
+.product-actions button.delete-button:hover {
+    background-color: darkred;
+}
+
+.product-actions button.edit-button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Tamaño del botón más grande */
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 5px; /* Margen superior para separar de otros botones */
+}
+
+.product-actions button.edit-button:hover {
+    background-color: darkblue;
+}
+
+.admin-product-title {
+    color: #5cc6ff;
+    margin: 0;
+    font-size: 1.2em;
+}
+
+/* Estilo único para precio, stock y descripción */
+.admin-product-price,
+.admin-product-stock,
+.admin-product-description {
+    color: #e3ff78;
+}
+
+@keyframes neon-border {
+    0%, 100% {
+        box-shadow: 0 0 5px #00FFFB, 0 0 10px #00FFFB, 0 0 15px #00FFFB, 0 0 20px #00FFFB;
+    }
+    50% {
+        box-shadow: 0 0 2px #00FFFB, 0 0 5px #00FFFB, 0 0 10px #00FFFB, 0 0 15px #00FFFB;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.admin-page {
+    display: flex;
+    background-color: #000; /* Fondo negro */
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #1a1a1a; /* Color oscuro para la barra lateral */
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    margin: 20px 0;
+}
+
+.sidebar-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+}
+
+.sidebar-menu a:hover {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.logout-button {
+    background-color: red;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.logout-button:hover {
+    background-color: darkred;
+}
+
+.admin-content {
+    flex: 1;
+    padding: 20px;
+    color: white;
+}
+
+.product-list-container,
+.add-product-container {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    animation: neon-border 2s infinite;
+    border: 2px solid transparent;
+}
+
+.add-product-container form input,
+.add-product-container form textarea,
+.add-product-container form button,
+.create-product-button,
+.view-products-button {
+    width: 20%;
+    padding: 7px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.add-product-container form button,
+.create-product-button,
+.view-products-button {
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+
+.add-product-container form button:hover,
+.create-product-button:hover,
+.view-products-button:hover {
+    background-color: darkgreen;
+}
+
+.product-list h3,
+.add-product-container h3 {
+    color: #ffd700; /* Amarillo dorado */
+}
+
+.product-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.product-list li {
+    display: flex;
+    align-items: center;
+    background-color: #444;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.product-imagen {
+    width: 90px; /* Tamaño de la imagen más grande */
+    height: 90px;
+    margin-right: 20px;
+    margin-left: 30px;
+}
+
+.product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.product-info h4 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.product-info p {
+    margin: 5px 0;
+}
+
+.product-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .product-actions button {
     background-color: red;
     color: white;
@@ -174,7 +378,6 @@ body {
     font-size: 1.2em;
 }
 
-/* Estilo único para precio, stock y descripción */
 .admin-product-price,
 .admin-product-stock,
 .admin-product-description {
@@ -199,7 +402,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     width: 80%;
-    max-width: 400px;
+    max-width: 600px;
     text-align: center;
     color: white;
 }
@@ -208,26 +411,34 @@ body {
     margin-bottom: 20px;
 }
 
-.modal-content button {
-    background-color: #00e1ff;
-    color: black;
-    border: none;
-    padding: 10px 20px;
+.modal-content input,
+.modal-content textarea {
+    width: 100%; /* Ancho completo dentro del modal */
+    padding: 8px;
+    margin: 5px 0;
     border-radius: 5px;
-    cursor: pointer;
-    margin: 5px;
+    border: 1px solid #ccc; /* Borde más sutil */
 }
 
-.modal-content .delete-button {
-    background-color: red; /* Cambia el color a rojo */
+.modal-content button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+}
+
+.edit-button {
+    background-color: #4CAF50; /* Verde para confirmar */
     color: white;
 }
 
-.modal-content .delete-button:hover {
-    background-color: darkred; /* Color más oscuro al pasar el ratón */
+.cancel-button {
+    background-color: #f44336; /* Rojo para cancelar */
+    color: white;
 }
 
-.modal-content .cancel-button:hover {
-    background-color: #0c5bb5;
+.edit-button:hover,
+.cancel-button:hover {
+    opacity: 0.8; /* Efecto de opacidad al pasar el ratón */
+    
 }
-

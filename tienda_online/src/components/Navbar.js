@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../protected/AuthContext';
 import './NavBar.css';
-import purchaseHistoryIcon from '../components/Historial.png'; // Importa el nuevo ícono
-import purchaseCarIcon from '../components/CAR-BUY.png'; // Importa el nuevo ícono
+import purchaseHistoryIcon from '../components/Historial.png'; 
+import purchaseCarIcon from '../components/CAR-BUY.png'; 
 
 
 const Navbar = () => {
