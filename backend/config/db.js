@@ -1,14 +1,13 @@
 const sql = require("mssql");
 
 const dbConfig = {
-  user: "Juan",
-  password: "2304",
-  server: "localhost",
-  database: "tiendita",
+  user: "sqlserver", 
+  password: "Gatito06", 
+  server: "34.30.173.222", 
+  database: "tiendita", 
   options: {
-    encrypt: true, // Use this if you're on Windows Azure
-    enableArithAbort: true,
-    trustServerCertificate: true
+    encrypt: false, 
+    enableArithAbort: true
   },
 };
 
@@ -22,7 +21,6 @@ const poolPromise = new sql.ConnectionPool(dbConfig)
     console.error("Database Connection Failed! Bad Config: ", err);
     throw err;
   });
-  
 
 module.exports = {
   sql,
