@@ -1,28 +1,21 @@
-const sql = require("mssql");
+const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const userRoutes = require('./routes/userRoutes');
+const productRoutes = require('./routes/productRoutes');
+const orderRoutes = require('./routes/orderRoutes');
 
-const dbConfig = {
-  user: "sqlserver", 
-  password: "Gatito06", 
-  server: "34.30.173.222", 
-  database: "tiendita", 
-  options: {
-    encrypt: false, 
-    enableArithAbort: true
-  },
-};
+const app = express();
 
-const poolPromise = new sql.ConnectionPool(dbConfig)
-  .connect()
-  .then((pool) => {
-    console.log("Connected to SQL Server");
-    return pool;
-  })
-  .catch((err) => {
-    console.error("Database Connection Failed! Bad Config: ", err);
-    throw err;
-  });
+app.use(bodyParser.json());
+app.use(cors());
 
-module.exports = {
-  sql,
-  poolPromise,
-};
+app.use('/api/users', userRoutes);
+app.use('/api/products', productRoutes);
+app.use('/api/orders', orderRoutes); // Asegúrate de que el prefijo sea correcto
+
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
