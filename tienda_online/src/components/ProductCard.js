@@ -11,7 +11,7 @@ const ProductCard = ({ product }) => {
         try {
             await axios.post(`${backendUrl}/api/orders`, {
                 productId: product.ProductoID,
-                quantity: 1 // or any quantity logic you have
+                quantity: 1 // o cualquier lógica de cantidad que tengas
             });
             alert('Purchase successful!');
         } catch (error) {
