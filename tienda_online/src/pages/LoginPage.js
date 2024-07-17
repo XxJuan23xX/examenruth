@@ -16,7 +16,7 @@ const LoginPage = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('${process.env.REACT_APP_API_URL}/users/login', { email, password });
+            const response = await axios.post(`${process.env.REACT_APP_API_URL}/users/login`, { email, password });
             const token = response.data.token;
             const userData = JSON.parse(atob(token.split('.')[1]));
             login(token, userData);
