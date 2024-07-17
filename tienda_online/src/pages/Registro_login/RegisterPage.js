@@ -17,7 +17,7 @@ const RegisterPage = () => {
     const handleRegister = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5000/api/users/register', {
+            await axios.post('${process.env.REACT_APP_API_URL}/users/register', {
                 nombre,
                 email,
                 password,
