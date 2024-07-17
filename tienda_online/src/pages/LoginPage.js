@@ -1,3 +1,4 @@
+// src/pages/LoginPage.js
 import React, { useState, useContext } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
@@ -16,7 +17,7 @@ const LoginPage = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/api/users/login', { email, password });
+            const response = await axios.post(`${process.env.REACT_APP_API_URL}/users/login`, { email, password });
             const token = response.data.token;
             const userData = JSON.parse(atob(token.split('.')[1]));
             login(token, userData);
