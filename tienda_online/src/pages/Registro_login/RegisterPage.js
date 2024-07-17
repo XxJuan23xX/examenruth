@@ -1,11 +1,10 @@
-// src/pages/RegisterPage.js
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
-import Navbar from '../components/Navbar';
+import Navbar from '../../components/Navbar';
 import './RegisterPage.css';
 
-import RegisterImage from '../components/Perrito.jpg'; // Asegúrate de tener la ruta correcta para la imagen
+import RegisterImage from '../../components/Perrito.jpg'; // Asegúrate de tener la ruta correcta para la imagen
 
 const RegisterPage = () => {
     const [nombre, setNombre] = useState('');
@@ -18,7 +17,7 @@ const RegisterPage = () => {
     const handleRegister = async (e) => {
         e.preventDefault();
         try {
-            await axios.post(`${process.env.REACT_APP_API_URL}/users/register`, {
+            await axios.post('http://localhost:5000/api/users/register', {
                 nombre,
                 email,
                 password,
