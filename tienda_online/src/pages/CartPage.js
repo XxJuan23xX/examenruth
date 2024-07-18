@@ -16,7 +16,7 @@ const CartPage = () => {
         try {
             const token = localStorage.getItem('token');
             const response = await axios.post(
-                `${process.env.REACT_APP_API_URL}/api/orders`,
+                `${process.env.REACT_APP_API_URL}/orders`,
                 { products: cart, total: total - discount, estado: 'Pendiente' },
                 {
                     headers: {
