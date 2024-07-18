@@ -11,7 +11,7 @@ const AdminOrdersPage = () => {
         const fetchOrders = async () => {
             try {
                 const token = localStorage.getItem('token');
-                const response = await axios.get('http://localhost:5000/api/admin/orders', {
+                const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/admin/orders`, {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 setOrders(response.data);

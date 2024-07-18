@@ -21,7 +21,7 @@ const AdminPage = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const res = await axios.get('http://localhost:5000/api/products');
+                const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/products`);
                 setProducts(res.data);
             } catch (error) {
                 console.error('Error fetching products', error);
@@ -34,7 +34,7 @@ const AdminPage = () => {
     const handleAddProduct = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post('http://localhost:5000/api/products', {
+            const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/products`, {
                 Nombre: newProduct.name,
                 Precio: newProduct.price,
                 Stock: newProduct.stock,
@@ -51,7 +51,7 @@ const AdminPage = () => {
 
     const handleDeleteProduct = async () => {
         try {
-            await axios.delete(`http://localhost:5000/api/products/${productToDelete}`);
+            await axios.delete(`${process.env.REACT_APP_API_URL}/api/products/${productToDelete}`);
             setProducts(products.filter(product => product.ProductoID !== productToDelete));
             setShowDeleteModal(false); // Hide delete confirmation modal
         } catch (error) {
@@ -61,7 +61,7 @@ const AdminPage = () => {
 
     const handleEditProduct = async () => {
         try {
-            const res = await axios.put(`http://localhost:5000/api/products/${productToEdit.ProductoID}`, {
+            const res = await axios.put(`${process.env.REACT_APP_API_URL}/api/products/${productToEdit.ProductoID}`, {
                 Nombre: productToEdit.Nombre,
                 Precio: productToEdit.Precio,
                 Stock: productToEdit.Stock,
